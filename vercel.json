@@ -1,7 +1,7 @@
 {
   "name": "express-smartprix-api",
   "version": "1.0.0",
-  "main": "api/mobiles.js",
+  
   "scripts": {
     "dev": "node api/mobiles.js"
   },
@@ -11,4 +11,4 @@
     "mongoose": "^7.6.1",
     "serverless-http": "^3.0.1"
   }
-}
+}             
