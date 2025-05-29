@@ -2,8 +2,8 @@ const express = require('express');
 const rateLimit = require('express-rate-limit');
 const serverless = require('serverless-http');
 
-const connectDB = require('../utils/db');
-const Device = require('../models/Device');
+const connectDB = require('./utils/db');
+const Device = require('./models/Device');
 
 const app = express();
 app.use(express.json());
