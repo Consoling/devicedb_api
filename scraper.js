@@ -70,7 +70,19 @@ async function scrapeDevices(brand, category) {
     const baseUrl = categories[category];
     const url = `${baseUrl}mobiles/${brand}-brand`;
 
-    const browser = await puppeteer.launch({ headless: 'new' });
+    const browser = await puppeteer.launch({
+        headless: true,
+        args: [
+            '--no-sandbox',
+            '--disable-setuid-sandbox',
+            '--disable-dev-shm-usage',
+            '--disable-accelerated-2d-canvas',
+            '--no-zygote',
+            '--disable-gpu',
+            '--single-process'
+        ]
+    });
+
     const page = await browser.newPage();
 
     await page.setUserAgent(
