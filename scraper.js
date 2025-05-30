@@ -213,7 +213,7 @@ async function main() {
                 console.log(`⚠ No data to save for ${brand}`);
             }
         } catch (error) {
-            const errorMsg = `❌ Error for brand ${brand} at ${new Date().toISOString()}:\n${err.stack || err.message}`;
+            const errorMsg = `❌ Error for brand ${brand} at ${new Date().toISOString()}:\n${error.stack || error.message}`;
             console.error(errorMsg);
             await sendMail('DeviceDB Scraper: Error', errorMsg);
         }
